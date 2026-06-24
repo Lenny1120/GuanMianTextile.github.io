@@ -1,0 +1,1777 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GUAN MIAN Textile - Luxury Light Theme</title>
+<style>
+:root{
+--bg:#F8F5F0;
+--bg-warm:#FCFAF7;
+--bg-fabric:#F3F6F6;
+--bg-contact:#F4F1EB;
+--card:#FFFFFF;
+--primary:#1B6B7B;
+--text:#1C1C1C;
+--muted:#6C757D;
+--border:#E7E4DD;
+--shadow-subtle:0 2px 12px rgba(28,28,28,.04);
+--shadow-lift:0 8px 24px rgba(28,28,28,.06);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+font-family:Inter,Arial,sans-serif;
+background:var(--bg);
+color:var(--text);
+scroll-behavior:smooth;
+}
+nav{
+position:fixed;
+top:0;
+width:100%;
+min-height:100px;
+background:rgba(248,245,240,.92);
+backdrop-filter:blur(12px);
+z-index:999;
+border-bottom:1px solid var(--border);
+}
+.nav-wrap{
+max-width:1400px;
+margin:auto;
+padding:20px 48px;
+min-height:100px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:32px;
+}
+.brand-logo{
+display:flex;
+align-items:center;
+text-decoration:none;
+flex-shrink:0;
+padding-right:12px;
+}
+.brand-logo img{
+height:80px;
+width:auto;
+display:block;
+}
+.menu{
+display:flex;
+gap:35px;
+}
+.menu a{
+text-decoration:none;
+color:var(--text);
+font-weight:500;
+}
+.nav-actions{
+display:flex;
+align-items:center;
+gap:12px;
+flex-shrink:0;
+}
+.lang-btn{
+background:transparent;
+color:var(--primary);
+border:1px solid var(--primary);
+padding:10px 18px;
+border-radius:30px;
+cursor:pointer;
+font-weight:600;
+font-size:14px;
+}
+.lang-btn:hover{
+background:var(--primary);
+color:white;
+}
+@keyframes fadeInUp{
+from{opacity:0;transform:translateY(32px)}
+to{opacity:1;transform:translateY(0)}
+}
+.fade-in{
+opacity:0;
+}
+.fade-in.visible{
+animation:fadeInUp 1.1s cubic-bezier(.22,1,.36,1) forwards;
+}
+.fade-in-delay{
+animation-delay:.2s;
+}
+.about-section{
+padding:140px 8%;
+background:#FCFAF7;
+}
+.about-editorial{
+display:grid;
+grid-template-columns:1.05fr .95fr;
+gap:88px;
+align-items:start;
+margin-bottom:0;
+}
+.about-copy{
+display:flex;
+flex-direction:column;
+padding-top:8px;
+}
+.about-copy h2{
+font-family:Georgia,"Times New Roman",serif;
+font-size:clamp(36px,3.6vw,46px);
+line-height:1.18;
+text-align:left;
+margin-bottom:20px;
+font-weight:400;
+letter-spacing:0.5px;
+color:var(--text);
+}
+.about-subtitle{
+font-size:12px;
+letter-spacing:3.5px;
+text-transform:uppercase;
+color:var(--primary);
+margin-bottom:32px;
+font-weight:500;
+}
+.about-intro{
+max-width:650px;
+font-size:17px;
+line-height:2;
+color:var(--muted);
+font-weight:400;
+letter-spacing:0.2px;
+margin-bottom:52px;
+}
+.about-stats{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:44px 48px;
+max-width:650px;
+}
+.about-stat__number{
+font-family:Georgia,"Times New Roman",serif;
+font-size:clamp(40px,4vw,54px);
+font-weight:400;
+line-height:1;
+color:var(--text);
+margin-bottom:12px;
+letter-spacing:0.5px;
+transition:color .35s ease;
+}
+.about-stat:hover .about-stat__number{
+color:var(--primary);
+}
+.about-stat__label{
+font-size:12px;
+letter-spacing:2px;
+text-transform:uppercase;
+color:var(--muted);
+line-height:1.55;
+max-width:200px;
+}
+.about-why{
+margin-top:96px;
+padding-top:80px;
+border-top:1px solid rgba(231,228,221,.65);
+}
+.about-why__title{
+font-family:Georgia,"Times New Roman",serif;
+font-size:clamp(28px,3vw,36px);
+font-weight:400;
+letter-spacing:0.5px;
+margin-bottom:52px;
+color:var(--text);
+max-width:650px;
+}
+.about-advantages{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:28px;
+}
+.about-adv{
+padding:36px 32px 40px;
+background:#FFFFFF;
+border-radius:20px;
+border:1px solid var(--border);
+box-shadow:var(--shadow-subtle);
+transition:transform .35s ease,box-shadow .35s ease;
+}
+.about-adv:hover{
+transform:translateY(-4px);
+box-shadow:var(--shadow-lift);
+}
+.about-adv__icon{
+width:32px;
+height:32px;
+color:var(--text);
+opacity:.72;
+margin-bottom:24px;
+}
+.about-adv__icon svg{
+width:100%;
+height:100%;
+stroke:currentColor;
+fill:none;
+stroke-width:1.5;
+stroke-linecap:round;
+stroke-linejoin:round;
+}
+.about-adv__category{
+font-size:11px;
+letter-spacing:3px;
+text-transform:uppercase;
+color:var(--primary);
+margin-bottom:14px;
+font-weight:500;
+}
+.about-adv__headline{
+font-family:Georgia,"Times New Roman",serif;
+font-size:22px;
+font-weight:400;
+line-height:1.35;
+color:var(--text);
+margin-bottom:14px;
+letter-spacing:0.2px;
+}
+.about-adv__desc{
+font-size:15px;
+line-height:1.75;
+color:var(--muted);
+}
+.about-carousel{
+position:relative;
+border-radius:24px;
+overflow:hidden;
+box-shadow:var(--shadow-subtle);
+border:1px solid var(--border);
+background:#F5F2ED;
+aspect-ratio:720 / 832;
+max-height:640px;
+width:100%;
+max-width:min(100%, calc(640px * 720 / 832));
+margin:0 auto;
+}
+.about-carousel-inner{
+position:relative;
+width:100%;
+height:100%;
+min-height:0;
+}
+.about-slide{
+position:absolute;
+inset:0;
+opacity:0;
+transition:opacity .85s ease;
+pointer-events:none;
+}
+.about-slide.active{
+opacity:1;
+z-index:1;
+pointer-events:auto;
+}
+.about-slide img,
+.about-slide video{
+width:100%;
+height:100%;
+display:block;
+}
+.about-slide img{
+object-fit:cover;
+object-position:center;
+}
+.about-slide video{
+object-fit:contain;
+object-position:center;
+background:#F5F2ED;
+}
+.carousel-btn{
+position:absolute;
+top:50%;
+transform:translateY(-50%);
+z-index:2;
+width:44px;
+height:44px;
+border:none;
+border-radius:50%;
+background:rgba(255,255,255,.88);
+color:var(--text);
+font-size:22px;
+line-height:1;
+cursor:pointer;
+display:flex;
+align-items:center;
+justify-content:center;
+transition:background .25s,transform .25s;
+box-shadow:0 4px 16px rgba(0,0,0,.08);
+}
+.carousel-btn:hover{
+background:white;
+transform:translateY(-50%) scale(1.05);
+}
+.carousel-prev{left:16px}
+.carousel-next{right:16px}
+.carousel-dots{
+position:absolute;
+bottom:20px;
+left:50%;
+transform:translateX(-50%);
+display:flex;
+gap:8px;
+z-index:2;
+}
+.carousel-dot{
+width:8px;
+height:8px;
+padding:0;
+border:none;
+border-radius:50%;
+background:rgba(255,255,255,.45);
+cursor:pointer;
+transition:all .35s ease;
+}
+.carousel-dot.active{
+width:28px;
+border-radius:4px;
+background:rgba(255,255,255,.95);
+}
+.about-adv__desc{
+font-size:15px;
+line-height:1.75;
+color:var(--muted);
+}
+.about-visual{
+position:relative;
+}
+.hero{
+height:100vh;
+position:relative;
+overflow:hidden;
+padding:140px 8% 0;
+background:#F8F5F0;
+}
+.hero-inner{
+position:relative;
+z-index:1;
+height:100%;
+display:grid;
+grid-template-columns:0.35fr 0.65fr;
+align-items:center;
+gap:48px;
+}
+.hero-content{
+max-width:560px;
+}
+.hero-visual{
+display:flex;
+align-items:center;
+justify-content:stretch;
+width:100%;
+min-width:0;
+}
+.hero-carousel{
+position:relative;
+width:100%;
+aspect-ratio:1672 / 940;
+max-height:min(82vh,880px);
+border-radius:30px;
+overflow:hidden;
+border:1px solid var(--border);
+box-shadow:var(--shadow-lift);
+background:#F5F2ED;
+}
+.hero-carousel .carousel-inner{
+position:relative;
+width:100%;
+height:100%;
+margin:0;
+}
+.hero-carousel .carousel-slide{
+display:flex;
+align-items:center;
+justify-content:center;
+background:#F5F2ED;
+}
+.hero-carousel .carousel-slide img{
+width:100%;
+height:100%;
+object-fit:contain;
+object-position:center;
+display:block;
+}
+.hero-logo{
+width:290px;
+max-width:100%;
+height:auto;
+display:block;
+margin-bottom:36px;
+}
+.hero h1{
+font-size:52px;
+line-height:1.12;
+margin-bottom:22px;
+letter-spacing:1px;
+text-transform:uppercase;
+font-weight:600;
+}
+.hero-sub{
+font-size:20px;
+color:var(--muted);
+margin-bottom:30px;
+font-style:italic;
+letter-spacing:0.3px;
+}
+.hero p.hero-detail{
+font-size:16px;
+color:var(--muted);
+margin-bottom:30px;
+}
+.hero-buttons{
+display:flex;
+gap:15px;
+flex-wrap:wrap;
+}
+.btn{
+padding:14px 28px;
+border-radius:30px;
+text-decoration:none;
+font-weight:600;
+}
+.btn-primary{
+background:var(--primary);
+color:white;
+}
+.carousel-slide{
+position:absolute;
+inset:0;
+opacity:0;
+transition:opacity .85s ease;
+pointer-events:none;
+}
+.carousel-slide.active{
+opacity:1;
+z-index:1;
+pointer-events:auto;
+}
+.carousel-slide video{
+background:#1a1a1a;
+}
+section{
+padding:110px 8%;
+}
+section.contact-section{
+padding:140px 8% 120px;
+}
+.section-title{
+font-size:46px;
+text-align:center;
+margin-bottom:20px;
+}
+.section-sub{
+text-align:center;
+color:var(--muted);
+margin-bottom:60px;
+}
+.fabric-section{
+padding:140px 8%;
+background:#F3F6F6;
+}
+.fabric-header{
+text-align:center;
+margin-bottom:80px;
+}
+.fabric-title{
+font-family:Georgia,"Times New Roman",serif;
+font-size:clamp(40px,4vw,52px);
+font-weight:400;
+letter-spacing:1px;
+margin-bottom:22px;
+color:var(--text);
+}
+.fabric-subtitle{
+font-size:17px;
+color:var(--muted);
+letter-spacing:0.4px;
+line-height:1.6;
+max-width:580px;
+margin:0 auto;
+}
+.fabric-gallery{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:36px;
+max-width:1320px;
+margin:0 auto;
+}
+.fabric-card{
+background:#FFFFFF;
+border-radius:20px;
+overflow:hidden;
+border:1px solid var(--border);
+box-shadow:var(--shadow-subtle);
+display:flex;
+flex-direction:column;
+min-height:500px;
+transition:transform .35s ease,box-shadow .35s ease;
+}
+.fabric-card:hover{
+transform:translateY(-6px);
+box-shadow:var(--shadow-lift);
+}
+.fabric-visual{
+position:relative;
+width:100%;
+aspect-ratio:4 / 5;
+flex:none;
+overflow:hidden;
+background:#EDEAE4;
+}
+.fabric-visual img{
+width:100%;
+height:100%;
+object-fit:cover;
+object-position:center;
+display:block;
+transition:transform .45s ease,opacity .45s ease;
+}
+.fabric-card:not(.fabric-card--swap):hover .fabric-visual img{
+transform:scale(1.06);
+}
+.fabric-visual--swap .fabric-img{
+position:absolute;
+inset:0;
+}
+.fabric-visual--swap .fabric-img--hover{
+opacity:0;
+}
+.fabric-card--swap:hover .fabric-visual--swap .fabric-img--default{
+opacity:0;
+}
+.fabric-card--swap:hover .fabric-visual--swap .fabric-img--hover{
+opacity:1;
+}
+.fabric-visual::after{
+content:"";
+position:absolute;
+inset:0;
+background:linear-gradient(to top,rgba(0,0,0,.35),transparent 55%);
+opacity:0;
+transition:opacity .3s ease;
+pointer-events:none;
+}
+.fabric-card:hover .fabric-visual::after{
+opacity:1;
+}
+.fabric-view{
+position:absolute;
+bottom:22px;
+right:26px;
+z-index:1;
+font-size:12px;
+letter-spacing:2px;
+text-transform:uppercase;
+font-weight:600;
+color:#FFFFFF;
+opacity:0;
+transform:translateY(10px);
+transition:opacity .3s ease,transform .3s ease;
+}
+.fabric-card:hover .fabric-view{
+opacity:1;
+transform:translateY(0);
+}
+.fabric-body{
+flex:3;
+padding:28px 28px 32px;
+display:flex;
+flex-direction:column;
+gap:16px;
+}
+.fabric-name{
+font-size:22px;
+font-weight:600;
+letter-spacing:2px;
+color:var(--text);
+}
+.fabric-tags{
+display:flex;
+flex-wrap:wrap;
+gap:8px;
+}
+.fabric-tag{
+font-size:12px;
+letter-spacing:0.3px;
+padding:7px 14px;
+border-radius:30px;
+line-height:1.3;
+}
+.fabric-tag--app{
+background:#F8F7F4;
+color:var(--muted);
+border:1px solid var(--border);
+}
+.fabric-tag--feat{
+background:rgba(27,107,123,.08);
+color:var(--primary);
+border:1px solid rgba(27,107,123,.15);
+font-weight:500;
+}
+.mfg-section{
+padding:0;
+background:#F8F5F0;
+overflow:hidden;
+}
+.mfg-intro{
+text-align:center;
+padding:140px 8% 100px;
+max-width:920px;
+margin:0 auto;
+}
+.mfg-intro__title{
+font-family:Georgia,"Times New Roman",serif;
+font-size:clamp(38px,4.8vw,58px);
+font-weight:400;
+letter-spacing:3px;
+text-transform:uppercase;
+margin-bottom:28px;
+color:var(--text);
+}
+.mfg-intro__subtitle{
+font-size:clamp(20px,2.4vw,28px);
+line-height:1.55;
+color:var(--muted);
+font-weight:400;
+letter-spacing:0.3px;
+}
+.mfg-story{
+display:flex;
+flex-direction:column;
+}
+.mfg-block{
+position:relative;
+min-height:90vh;
+height:100vh;
+max-height:1080px;
+display:flex;
+align-items:flex-end;
+overflow:hidden;
+isolation:isolate;
+}
+.mfg-block__media{
+position:absolute;
+inset:0;
+z-index:0;
+overflow:hidden;
+}
+.mfg-block__img{
+width:100%;
+height:110%;
+object-fit:cover;
+object-position:center;
+will-change:transform;
+transform:scale(1.12);
+transition:transform 1.1s cubic-bezier(.22,1,.36,1);
+}
+.mfg-block--yarn .mfg-block__img{
+object-position:58% center;
+}
+.mfg-block--dyeing .mfg-block__img{
+object-position:center 42%;
+}
+.mfg-block--finishing .mfg-block__img{
+object-position:55% center;
+}
+.mfg-block.is-visible .mfg-block__img{
+transform:scale(1.04);
+}
+.mfg-block__overlay{
+position:absolute;
+inset:0;
+background:linear-gradient(105deg,rgba(12,14,16,.78) 0%,rgba(12,14,16,.42) 42%,rgba(12,14,16,.12) 100%);
+}
+.mfg-block--right .mfg-block__overlay{
+background:linear-gradient(285deg,rgba(12,14,16,.78) 0%,rgba(12,14,16,.42) 42%,rgba(12,14,16,.12) 100%);
+}
+.mfg-block__content{
+position:relative;
+z-index:2;
+width:100%;
+max-width:640px;
+padding:clamp(48px,8vh,96px) clamp(32px,7vw,120px);
+color:#FFFFFF;
+opacity:0;
+transform:translateY(48px);
+transition:opacity .95s cubic-bezier(.22,1,.36,1),transform .95s cubic-bezier(.22,1,.36,1);
+transition-delay:.12s;
+}
+.mfg-block--right .mfg-block__content{
+margin-left:auto;
+text-align:right;
+}
+.mfg-block.is-visible .mfg-block__content{
+opacity:1;
+transform:translateY(0);
+}
+.mfg-block__label{
+display:inline-block;
+font-size:11px;
+letter-spacing:3px;
+text-transform:uppercase;
+color:rgba(255,255,255,.72);
+margin-bottom:18px;
+padding-bottom:14px;
+border-bottom:1px solid rgba(255,255,255,.28);
+}
+.mfg-block__title{
+font-family:Georgia,"Times New Roman",serif;
+font-size:clamp(34px,4vw,52px);
+font-weight:400;
+letter-spacing:2px;
+text-transform:uppercase;
+line-height:1.12;
+margin-bottom:22px;
+}
+.mfg-block__desc{
+font-size:clamp(16px,1.5vw,18px);
+line-height:1.75;
+color:rgba(255,255,255,.88);
+max-width:520px;
+font-weight:400;
+}
+.mfg-block--right .mfg-block__desc{
+margin-left:auto;
+}
+.card{
+background:#FFFFFF;
+padding:40px;
+border-radius:24px;
+border:1px solid var(--border);
+box-shadow:var(--shadow-subtle);
+}
+.card h3{
+margin-bottom:20px;
+font-size:22px;
+}
+.contact-section{
+background:#F4F1EB;
+}
+.contact{
+display:grid;
+grid-template-columns:1.2fr .8fr;
+gap:40px;
+}
+input,textarea{
+width:100%;
+padding:15px;
+border:1px solid var(--border);
+border-radius:12px;
+margin-bottom:15px;
+font-family:inherit;
+font-size:15px;
+background:#FFFFFF;
+}
+button[type="submit"],.submit-btn{
+background:var(--primary);
+color:white;
+border:none;
+padding:15px 30px;
+border-radius:30px;
+cursor:pointer;
+font-weight:600;
+font-size:15px;
+transition:opacity .25s;
+}
+.submit-btn:disabled{
+opacity:.65;
+cursor:not-allowed;
+}
+.inquiry-form{
+margin:0;
+}
+.form-honeypot{
+position:absolute;
+left:-9999px;
+width:1px;
+height:1px;
+overflow:hidden;
+}
+.form-status{
+display:none;
+margin-top:4px;
+padding:14px 18px;
+border-radius:12px;
+font-size:14px;
+line-height:1.5;
+}
+.form-status.visible{
+display:block;
+}
+.form-status.success{
+background:#EDF7F4;
+color:#1B6B7B;
+border:1px solid rgba(27,107,123,.2);
+}
+.form-status.error{
+background:#FDF3F3;
+color:#8B3A3A;
+border:1px solid rgba(139,58,58,.15);
+}
+.social{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:15px;
+margin-bottom:30px;
+}
+.social a{
+display:flex;
+align-items:center;
+gap:12px;
+background:#FFFFFF;
+padding:16px 18px;
+text-decoration:none;
+color:var(--text);
+border-radius:15px;
+border:1px solid var(--border);
+box-shadow:var(--shadow-subtle);
+transition:box-shadow .25s ease,transform .25s ease,color .25s ease;
+font-weight:500;
+}
+.social a:hover{
+box-shadow:var(--shadow-lift);
+transform:translateY(-2px);
+color:var(--primary);
+}
+.social svg{
+width:28px;
+height:28px;
+flex-shrink:0;
+}
+.whatsapp-qr{
+text-align:center;
+padding-top:10px;
+border-top:1px solid var(--border);
+}
+.whatsapp-qr img{
+width:180px;
+height:180px;
+object-fit:contain;
+border-radius:12px;
+margin:12px auto 8px;
+display:block;
+}
+.whatsapp-qr p{
+color:var(--muted);
+font-size:14px;
+}
+footer{
+padding:80px 8% 64px;
+background:#F0EBE3;
+text-align:center;
+}
+.footer-brand{
+display:flex;
+flex-direction:column;
+align-items:center;
+gap:18px;
+max-width:480px;
+margin:0 auto;
+}
+.footer-logo{
+width:250px;
+height:auto;
+display:block;
+}
+.footer-tagline{
+font-size:15px;
+color:var(--text);
+letter-spacing:1.5px;
+}
+.footer-location{
+font-size:14px;
+color:var(--muted);
+letter-spacing:0.5px;
+}
+.footer-links{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:28px;
+margin-top:8px;
+}
+.footer-links a{
+color:var(--text);
+text-decoration:none;
+font-size:14px;
+letter-spacing:2px;
+text-transform:uppercase;
+font-weight:500;
+transition:color .25s;
+}
+.footer-links a:hover{
+color:var(--primary);
+}
+@media(max-width:900px){
+.contact-section{padding:100px 6% 88px}
+.mfg-intro{padding:100px 6% 72px}
+.mfg-block{min-height:82vh;height:82vh}
+.mfg-block__content{max-width:100%;text-align:left!important;margin-left:0!important}
+.mfg-block__desc{margin-left:0!important}
+.mfg-block--right .mfg-block__overlay{
+background:linear-gradient(105deg,rgba(12,14,16,.78) 0%,rgba(12,14,16,.42) 42%,rgba(12,14,16,.12) 100%);
+}
+.nav-wrap{padding:16px 24px;min-height:90px}
+.brand-logo img{height:68px}
+.menu{display:none}
+.hero-inner,.contact,.about-editorial{grid-template-columns:1fr}
+.about-editorial{gap:48px;margin-bottom:0}
+.about-carousel{max-height:none;max-width:100%}
+.about-carousel-inner{min-height:320px}
+.about-stats{gap:36px 32px}
+.about-why{margin-top:72px;padding-top:64px}
+.about-advantages{grid-template-columns:1fr}
+.about-why__title{margin-bottom:36px}
+.hero-logo{width:240px;margin-bottom:28px}
+.fabric-gallery{grid-template-columns:repeat(2,1fr);gap:28px}
+.hero h1{font-size:36px}
+.hero-carousel{max-height:none}
+.hero-inner{gap:40px}
+.social{grid-template-columns:1fr}
+.footer-logo{width:220px}
+}
+@media(max-width:520px){
+.fabric-gallery,.about-editorial{grid-template-columns:1fr}
+.fabric-card{min-height:460px}
+.about-section{padding:100px 6%}
+}
+@media(prefers-reduced-motion:reduce){
+.mfg-block__img,.mfg-block__content{transition:none!important;transform:none!important}
+.mfg-block.is-visible .mfg-block__content{opacity:1!important;transform:none!important}
+}
+</style>
+</head>
+<body>
+
+<nav>
+<div class="nav-wrap">
+<a href="#" class="brand-logo" aria-label="Guan Mian Home">
+<img src="guanmian-logo.png" alt="GUAN MIAN">
+</a>
+<div class="menu">
+<a href="#about" data-i18n="nav_about">About</a>
+<a href="#products" data-i18n="nav_products">Products</a>
+<a href="#technology" data-i18n="nav_technology">Technology</a>
+<a href="#contact" data-i18n="nav_contact">Contact</a>
+</div>
+<div class="nav-actions">
+<button type="button" class="lang-btn" id="lang-toggle">中文</button>
+</div>
+</div>
+</nav>
+
+<section class="hero">
+<div class="hero-inner">
+<div class="hero-content">
+<img src="guanmian-logo.png" alt="GUAN MIAN" class="hero-logo">
+<h1>
+<span data-i18n="hero_title_1">PREMIUM KNITTED FABRIC</span><br>
+<span data-i18n="hero_title_2">FOR GLOBAL FASHION BRANDS</span>
+</h1>
+<p class="hero-sub" data-i18n="hero_sub">Engineered For Modern Apparel</p>
+<p class="hero-detail" data-i18n="hero_detail">OEM & ODM · Fast Sampling · Vertical Supply Chain</p>
+<div class="hero-buttons">
+<a class="btn btn-primary" href="#products" data-i18n="hero_btn1">View Fabrics</a>
+</div>
+</div>
+<div class="hero-visual">
+<div class="hero-carousel" id="hero-carousel" aria-label="Factory and showroom gallery">
+<div class="carousel-inner">
+<div class="carousel-slide active">
+<img src="hero-images/hero-1.png" alt="Guan Mian textile factory building">
+</div>
+<div class="carousel-slide">
+<img src="hero-images/hero-2.png" alt="Guan Mian showroom entrance">
+</div>
+<div class="carousel-slide">
+<img src="hero-images/hero-3.png" alt="Premium knitwear display in showroom">
+</div>
+<div class="carousel-slide">
+<img src="hero-images/hero-4.png" alt="Circular knitting machine in production">
+</div>
+<div class="carousel-slide">
+<img src="hero-images/hero-5.jpg" alt="Precision knitting equipment detail">
+</div>
+<div class="carousel-slide">
+<img src="hero-images/hero-6.png" alt="Fabric warehouse and inventory">
+</div>
+</div>
+<button type="button" class="carousel-btn carousel-prev" aria-label="Previous slide">&#8249;</button>
+<button type="button" class="carousel-btn carousel-next" aria-label="Next slide">&#8250;</button>
+<div class="carousel-dots">
+<button type="button" class="carousel-dot active" aria-label="Slide 1"></button>
+<button type="button" class="carousel-dot" aria-label="Slide 2"></button>
+<button type="button" class="carousel-dot" aria-label="Slide 3"></button>
+<button type="button" class="carousel-dot" aria-label="Slide 4"></button>
+<button type="button" class="carousel-dot" aria-label="Slide 5"></button>
+<button type="button" class="carousel-dot" aria-label="Slide 6"></button>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="about" class="about-section">
+<div class="about-editorial fade-in">
+<div class="about-visual">
+<div class="about-carousel" id="about-carousel">
+<div class="about-carousel-inner">
+<div class="about-slide active">
+<video class="about-video" src="about-factory.mp4" muted playsinline preload="metadata" poster="about-factory-1.jpg"></video>
+</div>
+<div class="about-slide">
+<img src="about-factory-1.jpg" alt="Circular knitting machines at Guan Mian production facility">
+</div>
+<div class="about-slide">
+<img src="about-factory-2.jpg" alt="Yarn creel and overhead feeding system">
+</div>
+<div class="about-slide">
+<img src="about-factory-3.jpg" alt="Precision yarn feeding on knitting equipment">
+</div>
+</div>
+<button type="button" class="carousel-btn carousel-prev" aria-label="Previous slide">&#8249;</button>
+<button type="button" class="carousel-btn carousel-next" aria-label="Next slide">&#8250;</button>
+<div class="carousel-dots">
+<button type="button" class="carousel-dot active" aria-label="Slide 1"></button>
+<button type="button" class="carousel-dot" aria-label="Slide 2"></button>
+<button type="button" class="carousel-dot" aria-label="Slide 3"></button>
+<button type="button" class="carousel-dot" aria-label="Slide 4"></button>
+</div>
+</div>
+</div>
+<div class="about-copy">
+<h2 data-i18n="about_title">About Guan Mian</h2>
+<p class="about-subtitle" data-i18n="about_sub">Premium Knitted Fabric Manufacturer Since 2008</p>
+<p class="about-intro" data-i18n="about_intro">Guan Mian Textiles specializes in the research, development, and manufacturing of high-quality knitted fabrics. With a comprehensive supply chain system, the company leverages its core strengths—consistent quality, rapid development, and flexible production—to provide efficient, professional, one-stop fabric solutions for global apparel brands.</p>
+<div class="about-stats">
+<div class="about-stat">
+<div class="about-stat__number">18+</div>
+<p class="about-stat__label" data-i18n="stat1">Years Experience</p>
+</div>
+<div class="about-stat">
+<div class="about-stat__number">150+</div>
+<p class="about-stat__label" data-i18n="stat2">Employees</p>
+</div>
+<div class="about-stat">
+<div class="about-stat__number">15,000㎡</div>
+<p class="about-stat__label" data-i18n="stat3">Production Base &amp; Warehouse</p>
+</div>
+<div class="about-stat">
+<div class="about-stat__number">1,500 Tons</div>
+<p class="about-stat__label" data-i18n="stat4">Monthly Capacity</p>
+</div>
+</div>
+</div>
+</div>
+
+<div class="about-why fade-in fade-in-delay">
+<h3 class="about-why__title" data-i18n="about_why_title">Why Global Brands Choose Us</h3>
+<div class="about-advantages">
+<article class="about-adv">
+<div class="about-adv__icon" aria-hidden="true">
+<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+</div>
+<p class="about-adv__category" data-i18n="about_adv1_title">Fast Development</p>
+<h4 class="about-adv__headline" data-i18n="about_adv1_headline">7-Day Sample Development</h4>
+<p class="about-adv__desc" data-i18n="about_adv1_desc">Rapid response to market trends.</p>
+</article>
+<article class="about-adv">
+<div class="about-adv__icon" aria-hidden="true">
+<svg viewBox="0 0 24 24"><path d="M12 3l7 4v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V7l7-4z"/><path d="M9 12l2 2 4-4"/></svg>
+</div>
+<p class="about-adv__category" data-i18n="about_adv2_title">Stable Quality</p>
+<h4 class="about-adv__headline" data-i18n="about_adv2_headline">Strict Quality Control System</h4>
+<p class="about-adv__desc" data-i18n="about_adv2_desc">Consistent fabric performance and reliability.</p>
+</article>
+<article class="about-adv">
+<div class="about-adv__icon" aria-hidden="true">
+<svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h10M4 17h16"/><circle cx="18" cy="12" r="2"/></svg>
+</div>
+<p class="about-adv__category" data-i18n="about_adv3_title">Flexible Production</p>
+<h4 class="about-adv__headline" data-i18n="about_adv3_headline">OEM &amp; ODM Support</h4>
+<p class="about-adv__desc" data-i18n="about_adv3_desc">Flexible order quantities and customization capabilities.</p>
+</article>
+</div>
+</div>
+</section>
+
+<section id="products" class="fabric-section">
+<header class="fabric-header fade-in">
+<h2 class="fabric-title" data-i18n="products_title">Fabric Collection</h2>
+<p class="fabric-subtitle" data-i18n="products_sub">Explore Premium Knitted Fabrics For Modern Apparel</p>
+</header>
+<div class="fabric-gallery fade-in fade-in-delay" id="fabric-gallery"></div>
+</section>
+
+<section id="technology" class="mfg-section">
+<header class="mfg-intro fade-in">
+<h2 class="mfg-intro__title" data-i18n="mfg_title">MANUFACTURING EXCELLENCE</h2>
+<p class="mfg-intro__subtitle"><span data-i18n="mfg_subtitle_1">From Yarn To Fabric,</span><br><span data-i18n="mfg_subtitle_2">Every Step Under Control.</span></p>
+</header>
+
+<div class="mfg-story">
+<article class="mfg-block mfg-block--left mfg-block--yarn" data-mfg-step>
+<div class="mfg-block__media">
+<img class="mfg-block__img" src="manufacturing/step-1-yarn.jpg" alt="Premium yarn cones on modern spinning equipment" loading="lazy">
+<div class="mfg-block__overlay" aria-hidden="true"></div>
+</div>
+<div class="mfg-block__content">
+<span class="mfg-block__label" data-i18n="mfg_s1_label">Raw Material Control</span>
+<h3 class="mfg-block__title" data-i18n="mfg_s1_title">YARN SELECTION</h3>
+<p class="mfg-block__desc" data-i18n="mfg_s1_desc">Carefully selected premium yarns provide the foundation for exceptional knitted fabrics.</p>
+</div>
+</article>
+
+<article class="mfg-block mfg-block--right" data-mfg-step>
+<div class="mfg-block__media">
+<img class="mfg-block__img" src="manufacturing/step-2-knitting.png" alt="Modern circular knitting machines in production" loading="lazy">
+<div class="mfg-block__overlay" aria-hidden="true"></div>
+</div>
+<div class="mfg-block__content">
+<span class="mfg-block__label" data-i18n="mfg_s2_label">Precision Manufacturing</span>
+<h3 class="mfg-block__title" data-i18n="mfg_s2_title">KNITTING</h3>
+<p class="mfg-block__desc" data-i18n="mfg_s2_desc">Advanced circular knitting technology ensures consistency, stability, and performance.</p>
+</div>
+</article>
+
+<article class="mfg-block mfg-block--left mfg-block--dyeing" data-mfg-step>
+<div class="mfg-block__media">
+<img class="mfg-block__img" src="manufacturing/step-3-dyeing.jpg" alt="Industrial fabric dyeing machines in production facility" loading="lazy">
+<div class="mfg-block__overlay" aria-hidden="true"></div>
+</div>
+<div class="mfg-block__content">
+<span class="mfg-block__label" data-i18n="mfg_s3_label">Color Excellence</span>
+<h3 class="mfg-block__title" data-i18n="mfg_s3_title">DYEING</h3>
+<p class="mfg-block__desc" data-i18n="mfg_s3_desc">Accurate color development and eco-conscious dyeing processes deliver reliable results.</p>
+</div>
+</article>
+
+<article class="mfg-block mfg-block--right mfg-block--finishing" data-mfg-step>
+<div class="mfg-block__media">
+<img class="mfg-block__img" src="manufacturing/step-4-finishing.jpg" alt="Fabric finishing machines processing white textile rolls" loading="lazy">
+<div class="mfg-block__overlay" aria-hidden="true"></div>
+</div>
+<div class="mfg-block__content">
+<span class="mfg-block__label" data-i18n="mfg_s4_label">Value Enhancement</span>
+<h3 class="mfg-block__title" data-i18n="mfg_s4_title">FINISHING</h3>
+<p class="mfg-block__desc" data-i18n="mfg_s4_desc">Specialized finishing treatments enhance texture, functionality, and fabric performance.</p>
+</div>
+</article>
+
+<article class="mfg-block mfg-block--left" data-mfg-step>
+<div class="mfg-block__media">
+<img class="mfg-block__img" src="manufacturing/step-5-quality.jpg" alt="Professional fabric quality inspection" loading="lazy">
+<div class="mfg-block__overlay" aria-hidden="true"></div>
+</div>
+<div class="mfg-block__content">
+<span class="mfg-block__label" data-i18n="mfg_s5_label">Quality Assurance</span>
+<h3 class="mfg-block__title" data-i18n="mfg_s5_title">QUALITY CONTROL</h3>
+<p class="mfg-block__desc" data-i18n="mfg_s5_desc">Every fabric undergoes rigorous inspection to ensure consistency and international quality standards.</p>
+</div>
+</article>
+
+<article class="mfg-block mfg-block--right" data-mfg-step>
+<div class="mfg-block__media">
+<img class="mfg-block__img" src="manufacturing/step-6-packaging.jpg" alt="Finished fabric rolls prepared for global delivery" loading="lazy">
+<div class="mfg-block__overlay" aria-hidden="true"></div>
+</div>
+<div class="mfg-block__content">
+<span class="mfg-block__label" data-i18n="mfg_s6_label">Global Distribution</span>
+<h3 class="mfg-block__title" data-i18n="mfg_s6_title">PACKAGING &amp; DELIVERY</h3>
+<p class="mfg-block__desc" data-i18n="mfg_s6_desc">Efficient packaging and global logistics support reliable delivery worldwide.</p>
+</div>
+</article>
+</div>
+</section>
+
+<section id="contact" class="contact-section">
+<h2 class="section-title" data-i18n="contact_title">Contact Us</h2>
+<div class="contact">
+<div class="card">
+<form id="inquiry-form" class="inquiry-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+<input type="hidden" name="_subject" value="New Inquiry — GUAN MIAN Website">
+<input type="text" name="_gotcha" class="form-honeypot" tabindex="-1" autocomplete="off">
+<input type="text" name="name" required data-i18n-placeholder="ph_name" placeholder="Name">
+<input type="text" name="company" data-i18n-placeholder="ph_company" placeholder="Company">
+<input type="email" name="email" required data-i18n-placeholder="ph_email" placeholder="Email">
+<input type="tel" name="phone" data-i18n-placeholder="ph_phone" placeholder="Phone">
+<textarea name="message" rows="5" required data-i18n-placeholder="ph_message" placeholder="Message"></textarea>
+<button type="submit" class="submit-btn" id="inquiry-submit" data-i18n="btn_send">Send Inquiry</button>
+<p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+</form>
+</div>
+
+<div class="card">
+<h3 data-i18n="connect_title">Connect With Us</h3>
+<div class="social">
+<a href="https://www.tiktok.com/@guan.mian" target="_blank" rel="noopener noreferrer">
+<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.76a4.85 4.85 0 0 1-1.01-.07z"/></svg>
+<span>TikTok</span>
+</a>
+<a href="https://www.instagram.com/guanmian_" target="_blank" rel="noopener noreferrer">
+<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7.8 2h8.4A5.8 5.8 0 0 1 22 7.8v8.4A5.8 5.8 0 0 1 16.2 22H7.8A5.8 5.8 0 0 1 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8A3.6 3.6 0 0 0 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6A3.6 3.6 0 0 0 16.4 4H7.6m9.65 1.5a1.05 1.05 0 1 1 0 2.1 1.05 1.05 0 0 1 0-2.1M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z"/></svg>
+<span>Instagram</span>
+</a>
+<a href="https://www.facebook.com/share/p/1BLytgdrVy/" target="_blank" rel="noopener noreferrer">
+<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.5 9.9v-7H7.9V12h2.6V9.8c0-2.6 1.5-4 3.9-4 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.3 0-1.7.8-1.7 1.6V12h2.9l-.5 2.9h-2.4v7A10 10 0 0 0 22 12"/></svg>
+<span>Facebook</span>
+</a>
+<a href="https://gzguansheng.en.alibaba.com/" target="_blank" rel="noopener noreferrer">
+<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 4h16v16H4V4m2 2v12h12V6H6m2 2h8v2H8V8m0 4h8v2H8v-2m0 4h5v2H8v-2z"/></svg>
+<span>Alibaba</span>
+</a>
+<a href="mailto:guanmiantextile@gmail.com">
+<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2m0 2v.01L12 13 4 6.01V6h16M4 18V8.99l8 6.99 8-6.99V18H4z"/></svg>
+<span>Email</span>
+</a>
+</div>
+<div class="whatsapp-qr">
+<img src="whatsapp-qr.png" alt="WhatsApp QR Code">
+<p data-i18n="whatsapp_hint">Scan to connect on WhatsApp</p>
+</div>
+</div>
+</div>
+</section>
+
+<footer>
+<div class="footer-brand">
+<img src="guanmian-logo.png" alt="GUAN MIAN" class="footer-logo">
+<p class="footer-tagline" data-i18n="footer_tagline">Premium Knitted Fabric Manufacturer</p>
+<p class="footer-location" data-i18n="footer_location">Guangzhou, China</p>
+<div class="footer-links">
+<a href="mailto:guanmiantextile@gmail.com" data-i18n="footer_email">Email</a>
+<a href="#contact" data-i18n="footer_whatsapp">WhatsApp</a>
+<a href="https://gzguansheng.en.alibaba.com/" target="_blank" rel="noopener noreferrer" data-i18n="footer_alibaba">Alibaba</a>
+</div>
+</div>
+</footer>
+
+<script>
+// Replace YOUR_FORM_ID after signing up at https://formspree.io
+// Create a form and set notification email to guanmiantextile@gmail.com
+const FORMSPREE_FORM_ID = "YOUR_FORM_ID";
+
+const fabricCollection = [
+  {
+    slug: "air-layer",
+    hoverImage: "air-layer-hover",
+    name: { en: "AIR LAYER", zh: "空气层面料" },
+    applications: { en: ["Sweatshirts", "Hoodies", "Outerwear"], zh: ["卫衣", "连帽衫", "外穿外套"] },
+    features: { en: ["Structured", "Breathable", "Soft Touch"], zh: ["挺括", "透气", "柔触"] },
+  },
+  {
+    slug: "double-faced",
+    hoverImage: "double-faced-hover",
+    name: { en: "DOUBLE FACED", zh: "双面布" },
+    applications: { en: ["Jackets", "Fashion Sets", "Premium Casualwear"], zh: ["夹克", "时尚套装", "高端休闲装"] },
+    features: { en: ["Dual Surface", "Premium Feel", "Stable Shape"], zh: ["双面", "高端质感", "形态稳定"] },
+  },
+  {
+    slug: "fleece",
+    hoverImage: "fleece-hover",
+    name: { en: "FLEECE", zh: "抓毛绒" },
+    applications: { en: ["Hoodies", "Winter Jackets", "Sportswear"], zh: ["连帽衫", "冬季外套", "运动装"] },
+    features: { en: ["Warm", "Soft", "Comfortable"], zh: ["保暖", "柔软", "舒适"] },
+  },
+  {
+    slug: "jersey",
+    hoverImage: "jersey-hover",
+    name: { en: "JERSEY", zh: "平纹针织布" },
+    applications: { en: ["T-Shirts", "Polos", "Loungewear"], zh: ["T 恤", "Polo 衫", "家居休闲"] },
+    features: { en: ["Stretch", "Lightweight", "Breathable"], zh: ["弹力", "轻量", "透气"] },
+  },
+  {
+    slug: "jacquard",
+    hoverImage: "jacquard-hover",
+    name: { en: "JACQUARD", zh: "提花布" },
+    applications: { en: ["Fashion Apparel", "Dresses", "Premium Knitwear"], zh: ["时尚服装", "连衣裙", "高端针织"] },
+    features: { en: ["Textured", "Fashionable", "Premium"], zh: ["纹理感", "时尚", "高端"] },
+  },
+  {
+    slug: "terry",
+    hoverImage: "terry-hover",
+    name: { en: "TERRY", zh: "毛圈布" },
+    applications: { en: ["Activewear", "Sweatshirts", "Casualwear"], zh: ["运动装", "卫衣", "休闲装"] },
+    features: { en: ["Moisture Absorbent", "Comfortable", "Durable"], zh: ["吸湿", "舒适", "耐用"] },
+  },
+];
+
+function renderFabricGallery() {
+  const gallery = document.getElementById("fabric-gallery");
+  if (!gallery) return;
+
+  const viewLabel = translations[lang].fabric_view;
+  gallery.innerHTML = fabricCollection
+    .map((fabric) => {
+      const fabricName = fabric.name[lang];
+      const apps = fabric.applications[lang]
+        .map((item) => `<span class="fabric-tag fabric-tag--app">${item}</span>`)
+        .join("");
+      const feats = fabric.features[lang]
+        .map((item) => `<span class="fabric-tag fabric-tag--feat">${item}</span>`)
+        .join("");
+      const swapClass = fabric.hoverImage ? " fabric-card--swap" : "";
+      const visualClass = fabric.hoverImage ? "fabric-visual fabric-visual--swap" : "fabric-visual";
+      const images = fabric.hoverImage
+        ? `<img class="fabric-img fabric-img--default" src="fabric-images/${fabric.slug}.jpg" alt="${fabricName} lookbook" loading="lazy">
+<img class="fabric-img fabric-img--hover" src="fabric-images/${fabric.hoverImage}.jpg" alt="${fabricName} fabric texture" loading="lazy">`
+        : `<img src="fabric-images/${fabric.slug}.jpg" alt="${fabricName} fabric texture" loading="lazy">`;
+
+      return `
+<article class="fabric-card${swapClass}">
+<div class="${visualClass}">
+${images}
+<span class="fabric-view">${viewLabel}</span>
+</div>
+<div class="fabric-body">
+<h3 class="fabric-name">${fabricName}</h3>
+<div class="fabric-tags">${apps}</div>
+<div class="fabric-tags">${feats}</div>
+</div>
+</article>`;
+    })
+    .join("");
+}
+
+const translations = {
+  en: {
+    page_title: "GUAN MIAN Textile - Luxury Light Theme",
+    nav_about: "About",
+    nav_products: "Products",
+    nav_technology: "Manufacturing",
+    nav_contact: "Contact",
+    hero_title_1: "PREMIUM KNITTED FABRIC",
+    hero_title_2: "FOR GLOBAL FASHION BRANDS",
+    hero_sub: "Engineered For Modern Apparel",
+    hero_detail: "OEM & ODM · Fast Sampling · Vertical Supply Chain",
+    hero_btn1: "View Fabrics",
+    hero_media: "Fabric Motion / Factory Drone Video Area",
+    about_title: "About Guan Mian",
+    about_sub: "Premium Knitted Fabric Manufacturer Since 2008",
+    about_intro: "Guan Mian Textiles specializes in the research, development, and manufacturing of high-quality knitted fabrics. With a comprehensive supply chain system, the company leverages its core strengths—consistent quality, rapid development, and flexible production—to provide efficient, professional, one-stop fabric solutions for global apparel brands.",
+    stat1: "Years Experience",
+    stat2: "Employees",
+    stat3: "Production Base & Warehouse",
+    stat4: "Monthly Capacity",
+    about_why_title: "Why Global Brands Choose Us",
+    about_adv1_title: "Fast Development",
+    about_adv1_headline: "7-Day Sample Development",
+    about_adv1_desc: "Rapid response to market trends.",
+    about_adv2_title: "Stable Quality",
+    about_adv2_headline: "Strict Quality Control System",
+    about_adv2_desc: "Consistent fabric performance and reliability.",
+    about_adv3_title: "Flexible Production",
+    about_adv3_headline: "OEM & ODM Support",
+    about_adv3_desc: "Flexible order quantities and customization capabilities.",
+    products_title: "Fabric Collection",
+    products_sub: "Explore Premium Knitted Fabrics For Modern Apparel",
+    fabric_view: "View Collection →",
+    mfg_title: "MANUFACTURING EXCELLENCE",
+    mfg_subtitle_1: "From Yarn To Fabric,",
+    mfg_subtitle_2: "Every Step Under Control.",
+    mfg_s1_label: "Raw Material Control",
+    mfg_s1_title: "YARN SELECTION",
+    mfg_s1_desc: "Carefully selected premium yarns provide the foundation for exceptional knitted fabrics.",
+    mfg_s2_label: "Precision Manufacturing",
+    mfg_s2_title: "KNITTING",
+    mfg_s2_desc: "Advanced circular knitting technology ensures consistency, stability, and performance.",
+    mfg_s3_label: "Color Excellence",
+    mfg_s3_title: "DYEING",
+    mfg_s3_desc: "Accurate color development and eco-conscious dyeing processes deliver reliable results.",
+    mfg_s4_label: "Value Enhancement",
+    mfg_s4_title: "FINISHING",
+    mfg_s4_desc: "Specialized finishing treatments enhance texture, functionality, and fabric performance.",
+    mfg_s5_label: "Quality Assurance",
+    mfg_s5_title: "QUALITY CONTROL",
+    mfg_s5_desc: "Every fabric undergoes rigorous inspection to ensure consistency and international quality standards.",
+    mfg_s6_label: "Global Distribution",
+    mfg_s6_title: "PACKAGING & DELIVERY",
+    mfg_s6_desc: "Efficient packaging and global logistics support reliable delivery worldwide.",
+    contact_title: "Contact Us",
+    ph_name: "Name",
+    ph_company: "Company",
+    ph_email: "Email",
+    ph_phone: "Phone",
+    ph_message: "Message",
+    btn_send: "Send Inquiry",
+    form_sending: "Sending…",
+    form_success: "Thank you. Your inquiry has been sent. We will reply to your email shortly.",
+    form_error: "Something went wrong. Please try again or email us at guanmiantextile@gmail.com",
+    form_not_configured: "Form is not configured yet. Please contact us at guanmiantextile@gmail.com",
+    connect_title: "Connect With Us",
+    whatsapp_hint: "Scan to connect on WhatsApp",
+    footer_tagline: "Premium Knitted Fabric Manufacturer",
+    footer_location: "Guangzhou, China",
+    footer_email: "Email",
+    footer_whatsapp: "WhatsApp",
+    footer_alibaba: "Alibaba"
+  },
+  zh: {
+    page_title: "冠棉纺织 GUAN MIAN - 轻奢浅色主题",
+    nav_about: "关于我们",
+    nav_products: "产品",
+    nav_technology: "制造",
+    nav_contact: "联系",
+    hero_title_1: "高端针织面料",
+    hero_title_2: "服务全球时尚品牌",
+    hero_sub: "为现代服装产业精心打造",
+    hero_detail: "OEM & ODM · 快速打样 · 垂直供应链",
+    hero_btn1: "浏览面料",
+    hero_media: "面料展示 / 工厂航拍视频区域",
+    about_title: "关于冠棉",
+    about_sub: "自 2008 年起的高端针织面料制造商",
+    about_intro: "冠棉纺织专注于高品质针织面料的研发与制造。依托完善的供应链体系，公司以稳定品质、快速开发、柔性生产为核心优势，为全球服装品牌提供高效、专业、一站式的面料解决方案。",
+    stat1: "年行业经验",
+    stat2: "员工",
+    stat3: "生产基地与仓储",
+    stat4: "月产能",
+    about_why_title: "全球品牌为何选择我们",
+    about_adv1_title: "快速开发",
+    about_adv1_headline: "7 天打样开发",
+    about_adv1_desc: "快速响应市场趋势与品牌需求。",
+    about_adv2_title: "稳定品质",
+    about_adv2_headline: "严格品质管控体系",
+    about_adv2_desc: "面料性能稳定，品质可靠一致。",
+    about_adv3_title: "柔性生产",
+    about_adv3_headline: "OEM & ODM 支持",
+    about_adv3_desc: "灵活起订量与定制化生产能力。",
+    products_title: "面料系列",
+    products_sub: "探索面向现代服装的高端针织面料",
+    fabric_view: "查看系列 →",
+    mfg_title: "制造卓越",
+    mfg_subtitle_1: "从纱线到面料，",
+    mfg_subtitle_2: "每一步尽在掌控。",
+    mfg_s1_label: "原料管控",
+    mfg_s1_title: "纱线甄选",
+    mfg_s1_desc: "严选高端纱线，为卓越针织面料奠定品质基础。",
+    mfg_s2_label: "精密制造",
+    mfg_s2_title: "针织生产",
+    mfg_s2_desc: "先进圆机针织技术，确保面料稳定性与一致性。",
+    mfg_s3_label: "色彩卓越",
+    mfg_s3_title: "染色加工",
+    mfg_s3_desc: "精准配色开发与环保染色工艺，呈现可靠稳定的色彩表现。",
+    mfg_s4_label: "价值提升",
+    mfg_s4_title: "后整理",
+    mfg_s4_desc: "专业后整理工艺，提升面料质感、功能性与综合性能。",
+    mfg_s5_label: "品质保障",
+    mfg_s5_title: "质量检验",
+    mfg_s5_desc: "每匹面料均经严格检验，确保品质稳定并符合国际标准。",
+    mfg_s6_label: "全球交付",
+    mfg_s6_title: "包装与发货",
+    mfg_s6_desc: "高效包装与全球物流体系，保障面料稳定交付世界各地。",
+    contact_title: "联系我们",
+    ph_name: "姓名",
+    ph_company: "公司",
+    ph_email: "邮箱",
+    ph_phone: "电话",
+    ph_message: "留言",
+    btn_send: "发送询盘",
+    form_sending: "发送中…",
+    form_success: "感谢您的询盘，我们已收到，将尽快回复您的邮箱。",
+    form_error: "发送失败，请重试或直接发送邮件至 guanmiantextile@gmail.com",
+    form_not_configured: "表单尚未配置，请直接发送邮件至 guanmiantextile@gmail.com",
+    connect_title: "关注我们",
+    whatsapp_hint: "扫码添加 WhatsApp",
+    footer_tagline: "高端针织面料制造商",
+    footer_location: "中国 · 广州",
+    footer_email: "邮箱",
+    footer_whatsapp: "WhatsApp",
+    footer_alibaba: "阿里巴巴"
+  }
+};
+
+let lang = localStorage.getItem("guanmian_lang") || "en";
+
+function setLang(nextLang) {
+  lang = nextLang;
+  localStorage.setItem("guanmian_lang", lang);
+  document.documentElement.lang = lang === "zh" ? "zh-CN" : "en";
+  document.title = translations[lang].page_title;
+
+  document.querySelectorAll("[data-i18n]").forEach((el) => {
+    const key = el.dataset.i18n;
+    if (translations[lang][key]) {
+      el.textContent = translations[lang][key];
+    }
+  });
+
+  document.querySelectorAll("[data-i18n-placeholder]").forEach((el) => {
+    const key = el.dataset.i18nPlaceholder;
+    if (translations[lang][key]) {
+      el.placeholder = translations[lang][key];
+    }
+  });
+
+  document.getElementById("lang-toggle").textContent = lang === "en" ? "中文" : "EN";
+  renderFabricGallery();
+}
+
+document.getElementById("lang-toggle").addEventListener("click", () => {
+  setLang(lang === "en" ? "zh" : "en");
+});
+
+setLang(lang);
+
+const fadeEls = document.querySelectorAll(".fade-in");
+const fadeObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        fadeObserver.unobserve(entry.target);
+      }
+    });
+  },
+  { threshold: 0.15, rootMargin: "0px 0px -40px 0px" }
+);
+fadeEls.forEach((el) => fadeObserver.observe(el));
+
+(function initInquiryForm() {
+  const form = document.getElementById("inquiry-form");
+  const statusEl = document.getElementById("form-status");
+  const submitBtn = document.getElementById("inquiry-submit");
+  if (!form || !statusEl || !submitBtn) return;
+
+  function showStatus(type, messageKey) {
+    statusEl.textContent = translations[lang][messageKey];
+    statusEl.className = "form-status visible " + type;
+  }
+
+  function hideStatus() {
+    statusEl.className = "form-status";
+    statusEl.textContent = "";
+  }
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    hideStatus();
+
+    if (FORMSPREE_FORM_ID === "YOUR_FORM_ID") {
+      showStatus("error", "form_not_configured");
+      return;
+    }
+
+    form.action = "https://formspree.io/f/" + FORMSPREE_FORM_ID;
+    submitBtn.disabled = true;
+    statusEl.textContent = translations[lang].form_sending;
+    statusEl.className = "form-status visible";
+
+    try {
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: new FormData(form),
+        headers: { Accept: "application/json" },
+      });
+
+      if (response.ok) {
+        showStatus("success", "form_success");
+        form.reset();
+      } else {
+        showStatus("error", "form_error");
+      }
+    } catch {
+      showStatus("error", "form_error");
+    } finally {
+      submitBtn.disabled = false;
+    }
+  });
+})();
+
+function initCarousel(carouselId, options = {}) {
+  const carousel = document.getElementById(carouselId);
+  if (!carousel) return;
+
+  const slideSelector = options.slideSelector || ".carousel-slide, .about-slide";
+  const slides = carousel.querySelectorAll(slideSelector);
+  const dots = carousel.querySelectorAll(".carousel-dot");
+  const prevBtn = carousel.querySelector(".carousel-prev");
+  const nextBtn = carousel.querySelector(".carousel-next");
+  if (!slides.length || !prevBtn || !nextBtn) return;
+
+  let current = 0;
+  let timer = null;
+  let videoEndedHandler = null;
+  const interval = options.interval || 5000;
+
+  function stopVideoAdvance() {
+    if (!videoEndedHandler) return;
+    slides[current]?.querySelector("video")?.removeEventListener("ended", videoEndedHandler);
+    videoEndedHandler = null;
+  }
+
+  function manageVideos() {
+    slides.forEach((slide, i) => {
+      const video = slide.querySelector("video");
+      if (!video) return;
+      if (i === current) {
+        video.currentTime = 0;
+        video.play().catch(() => {});
+      } else {
+        video.pause();
+        video.currentTime = 0;
+      }
+    });
+  }
+
+  function goTo(index) {
+    current = (index + slides.length) % slides.length;
+    slides.forEach((slide, i) => slide.classList.toggle("active", i === current));
+    dots.forEach((dot, i) => dot.classList.toggle("active", i === current));
+    if (options.manageVideos) manageVideos();
+  }
+
+  function next() {
+    goTo(current + 1);
+    if (options.waitForVideoEnd) startAuto();
+  }
+
+  function prev() {
+    goTo(current - 1);
+    if (options.waitForVideoEnd) startAuto();
+  }
+
+  function startAuto() {
+    stopAuto();
+    stopVideoAdvance();
+
+    if (options.waitForVideoEnd) {
+      const video = slides[current]?.querySelector("video");
+      if (video) {
+        if (video.ended) {
+          next();
+          return;
+        }
+        videoEndedHandler = () => {
+          videoEndedHandler = null;
+          next();
+        };
+        video.addEventListener("ended", videoEndedHandler);
+        return;
+      }
+    }
+
+    timer = setInterval(next, interval);
+  }
+
+  function stopAuto() {
+    if (timer) {
+      clearInterval(timer);
+      timer = null;
+    }
+    stopVideoAdvance();
+  }
+
+  prevBtn.addEventListener("click", () => {
+    prev();
+    startAuto();
+  });
+  nextBtn.addEventListener("click", () => {
+    next();
+    startAuto();
+  });
+  dots.forEach((dot, i) => {
+    dot.addEventListener("click", () => {
+      goTo(i);
+      startAuto();
+    });
+  });
+
+  carousel.addEventListener("mouseenter", stopAuto);
+  carousel.addEventListener("mouseleave", startAuto);
+
+  let touchStartX = 0;
+  carousel.addEventListener(
+    "touchstart",
+    (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+      stopAuto();
+    },
+    { passive: true }
+  );
+  carousel.addEventListener(
+    "touchend",
+    (e) => {
+      const diff = e.changedTouches[0].screenX - touchStartX;
+      if (Math.abs(diff) > 50) {
+        diff > 0 ? prev() : next();
+      }
+      startAuto();
+    },
+    { passive: true }
+  );
+
+  startAuto();
+  if (options.manageVideos) manageVideos();
+}
+
+initCarousel("hero-carousel");
+initCarousel("about-carousel", {
+  slideSelector: ".about-slide",
+  manageVideos: true,
+  waitForVideoEnd: true
+});
+
+function initManufacturingStory() {
+  const blocks = document.querySelectorAll("[data-mfg-step]");
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+        }
+      });
+    },
+    { threshold: 0.3, rootMargin: "0px 0px -6% 0px" }
+  );
+
+  blocks.forEach((block) => revealObserver.observe(block));
+
+  if (reduceMotion || !blocks.length) return;
+
+  let ticking = false;
+
+  function updateParallax() {
+    ticking = false;
+    const vh = window.innerHeight;
+
+    blocks.forEach((block) => {
+      const img = block.querySelector(".mfg-block__img");
+      if (!img) return;
+
+      const rect = block.getBoundingClientRect();
+      if (rect.bottom < 0 || rect.top > vh) return;
+
+      const progress = (vh - rect.top) / (vh + rect.height);
+      const parallax = (progress - 0.5) * 72;
+      const scale = block.classList.contains("is-visible") ? 1.04 : 1.12;
+      img.style.transform = `scale(${scale}) translateY(${parallax}px)`;
+    });
+  }
+
+  function onScroll() {
+    if (!ticking) {
+      ticking = true;
+      requestAnimationFrame(updateParallax);
+    }
+  }
+
+  window.addEventListener("scroll", onScroll, { passive: true });
+  window.addEventListener("resize", onScroll, { passive: true });
+  updateParallax();
+}
+
+initManufacturingStory();
+</script>
+
+</body>
+</html>
